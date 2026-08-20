@@ -1,7 +1,7 @@
 # SteadyLink TypeScript SDK
 
 [![CI](https://github.com/SteadyLink-io/typescript-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/SteadyLink-io/typescript-sdk/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/@steadylink.io/sdk.svg)](https://www.npmjs.com/package/@steadylink.io/sdk)
+[![npm](https://img.shields.io/npm/v/@steadylink/sdk.svg)](https://www.npmjs.com/package/@steadylink/sdk)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 The official TypeScript client for the [SteadyLink API](https://steadylink.io/docs/developers/api-reference).
@@ -16,13 +16,13 @@ The client also works in runtimes that provide the standard Fetch API. Managemen
 ## Installation
 
 ```bash
-npm install @steadylink.io/sdk
+npm install @steadylink/sdk
 ```
 
 ## Quick start
 
 ```ts
-import { SteadyLink } from "@steadylink.io/sdk";
+import { SteadyLink } from "@steadylink/sdk";
 
 const client = new SteadyLink({
   apiKey: process.env.STEADYLINK_API_KEY!,
@@ -90,7 +90,7 @@ const client = new SteadyLink({
 ## Errors and retries
 
 ```ts
-import { SteadyLinkError, SteadyLinkNetworkError } from "@steadylink.io/sdk";
+import { SteadyLinkError, SteadyLinkNetworkError } from "@steadylink/sdk";
 
 try {
   await client.listBuckets();
