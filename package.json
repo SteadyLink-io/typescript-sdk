@@ -26,6 +26,6 @@
   "repository": { "type": "git", "url": "git+https://github.com/SteadyLink-io/typescript-sdk.git" },
   "homepage": "https://steadylink.io/docs/sdks",
   "bugs": { "url": "https://github.com/SteadyLink-io/typescript-sdk/issues" },
-  "publishConfig": { "access": "public", "provenance": true },
+  "publishConfig": { "access": "public" },
   "devDependencies": { "typescript": "^5.4.5" }
 }
