@@ -1,5 +1,5 @@
 {
-  "name": "@steadylink/sdk",
+  "name": "@steadylink.io/sdk",
   "version": "0.1.0",
   "description": "Official TypeScript client for the SteadyLink API",
   "type": "module",
