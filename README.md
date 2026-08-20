@@ -126,7 +126,7 @@ npm test
 npm pack --dry-run
 ```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the development and release process.
+See the [contributing guide](https://github.com/SteadyLink-io/typescript-sdk/blob/main/CONTRIBUTING.md) for the development and release process.
 
 ## License
 
