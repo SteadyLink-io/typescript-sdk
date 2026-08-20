@@ -1,0 +1,31 @@
+{
+  "name": "@steadylink/sdk",
+  "version": "0.1.0",
+  "description": "Official TypeScript client for the SteadyLink API",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE", "CHANGELOG.md"],
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "prepack": "npm run clean && npm test"
+  },
+  "engines": { "node": ">=20" },
+  "keywords": ["steadylink", "cdn", "assets", "media", "typescript", "sdk"],
+  "author": "SteadyLink",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/SteadyLink-io/typescript-sdk.git" },
+  "homepage": "https://steadylink.io/docs/sdks",
+  "bugs": { "url": "https://github.com/SteadyLink-io/typescript-sdk/issues" },
+  "publishConfig": { "access": "public", "provenance": true },
+  "devDependencies": { "typescript": "^5.4.5" }
+}
