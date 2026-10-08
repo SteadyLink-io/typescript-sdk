@@ -1,7 +1,7 @@
 {
   "name": "@steadylink/sdk",
-  "version": "0.1.0",
-  "description": "Official TypeScript client for the SteadyLink API",
+  "version": "0.2.0",
+  "description": "Official TypeScript client for the SteadyLink API: uploads, replacements that keep the same link, signed links, revisions, collections, and a next/image loader",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -9,23 +9,33 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
-    }
+    },
+    "./node": {
+      "types": "./dist/node.d.ts",
+      "import": "./dist/node.js"
+    },
+    "./next-loader": {
+      "types": "./dist/next-loader.d.ts",
+      "import": "./dist/next-loader.js"
+    },
+    "./package.json": "./package.json"
   },
   "files": ["dist", "README.md", "LICENSE", "CHANGELOG.md"],
   "sideEffects": false,
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
     "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.build.json --noEmit",
     "test": "npm run build && node --test test/*.test.mjs",
     "prepack": "npm run clean && npm test"
   },
-  "engines": { "node": ">=20" },
-  "keywords": ["steadylink", "cdn", "assets", "media", "typescript", "sdk"],
+  "engines": { "node": ">=18" },
+  "keywords": ["steadylink", "cdn", "assets", "media", "upload", "image", "next-image-loader", "typescript", "sdk"],
   "author": "SteadyLink",
   "license": "MIT",
   "repository": { "type": "git", "url": "git+https://github.com/SteadyLink-io/typescript-sdk.git" },
-  "homepage": "https://steadylink.io/docs/sdks",
+  "homepage": "https://steadylink.io/docs/developers/sdks",
   "bugs": { "url": "https://github.com/SteadyLink-io/typescript-sdk/issues" },
   "publishConfig": { "access": "public" },
-  "devDependencies": { "typescript": "^5.4.5" }
+  "devDependencies": { "@types/node": "^20.11.30", "typescript": "^5.4.5" }
 }
